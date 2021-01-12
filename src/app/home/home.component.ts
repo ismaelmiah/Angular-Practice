@@ -44,8 +44,8 @@ export class HomeComponent implements OnInit, OnDestroy {
         })
       )
       .subscribe(
-        (count) => {
-          console.log(count);
+        (data) => {
+          console.log(data);
         },
         (error) => {
           console.log(error);
