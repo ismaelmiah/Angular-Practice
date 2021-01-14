@@ -13,43 +13,43 @@ export class AppComponent implements OnInit {
   forbiddenUsername = ['ismail', 'rana'];
 
   ngOnInit(): void {
-    this.signupform = new FormGroup({
-      userData: new FormGroup({
-        username: new FormControl(null, [
-          Validators.required,
-          this.forbiddenNames.bind(this),
-        ]),
-        email: new FormControl(
-          null,
-          [Validators.required, Validators.email],
-          this.forbiddenEmails
-        ),
-      }),
-      gender: new FormControl('male'),
-      hobbies: new FormArray([]),
-    });
+    // this.signupform = new FormGroup({
+    //   userData: new FormGroup({
+    //     username: new FormControl(null, [
+    //       Validators.required,
+    //       this.forbiddenNames.bind(this),
+    //     ]),
+    //     email: new FormControl(
+    //       null,
+    //       [Validators.required, Validators.email],
+    //       this.forbiddenEmails
+    //     ),
+    //   }),
+    //   gender: new FormControl('male'),
+    //   hobbies: new FormArray([]),
+    // });
 
-    // this.signupform.valueChanges.subscribe((value) => {
-    //   console.log(value);
+    // // this.signupform.valueChanges.subscribe((value) => {
+    // //   console.log(value);
+    // // })
+
+    // this.signupform.statusChanges.subscribe((status) => {
+    //   console.log(status);
+    // });
+
+    // this.signupform.setValue({
+    //   'userData': {
+    //     'username': 'ismail',
+    //     'email': 'ismil96@gmail.com'
+    //   },
+    //   'gender' : 'male',
+    //   'hobbies' : []
     // })
-
-    this.signupform.statusChanges.subscribe((status) => {
-      console.log(status);
-    });
-
-    this.signupform.setValue({
-      'userData': {
-        'username': 'ismail',
-        'email': 'ismil96@gmail.com'
-      },
-      'gender' : 'male',
-      'hobbies' : []
-    })
-    this.signupform.patchValue({
-      'userData': {
-        'username': 'Rana',
-      }
-    })
+    // this.signupform.patchValue({
+    //   'userData': {
+    //     'username': 'Rana',
+    //   }
+    // })
   }
   onAddHobby() {
     const control = new FormControl(null, Validators.required);
