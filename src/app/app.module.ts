@@ -5,11 +5,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { FormAssignmentComponent } from './form-assignment/form-assignment.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormAssignmentComponent
+    FormAssignmentComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
